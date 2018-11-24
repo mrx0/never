@@ -17,12 +17,9 @@
 				</header>		
 				<div id="data">';
 				
-			//echo '<a href="shed_temlates.php" class="b">Шаблоны графиков</a>';
-			echo '<a href="settins.php" class="b">Настройки</a>';
-			echo '<a href="logs.php" class="b">LOGS</a>';
 			echo '<a href="wrights.php" class="b">Права</a>';
-			echo '<a href="/sxd" class="b">SXD</a>';			
-			echo '<a href="/phpmyadmin" class="b">PHPMyAdmin</a>';			
+			//echo '<a href="/sxd" class="b">SXD</a>';
+			//echo '<a href="/phpmyadmin" class="b">PHPMyAdmin</a>';
 
 				
 			echo '			

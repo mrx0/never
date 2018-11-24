@@ -94,37 +94,7 @@
 										echo '
 										
 									</div>
-								</div>
-								<div class="cellsBlock2">
-									<div class="cellLeft">Специализация</div>
-									<div class="cellRight">';
-
-                                            $specializations_temp = array();
-
-											//Преобразуем массив чтоб id стали ключами
-                                            if ($specializations != 0) {
-                                                foreach ($specializations as $data) {
-                                                    $specializations_temp[$data['id']] = $data;
-                                                }
-                                            }
-
-                                                foreach ($specialization_j as $data) {
-                                                    $chckd = '';
-                                                    if (!empty($specializations_temp)) {
-                                                        if (isset($specializations_temp[$data['id']])) {
-                                                            $chckd = 'checked';
-                                                        }
-                                                    }
-
-                                                    echo '<input type="checkbox" name="specializations[]" value="' . $data['id'] . '" ' . $chckd . '> ' . $data['name'] . '<br>';
-                                                }
-                                            //}
-
-										echo '
-										
-									</div>
-								</div>
-								';
+								</div>';
 
 				echo '								
 								

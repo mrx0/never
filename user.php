@@ -57,7 +57,7 @@
                         <div class="cellsBlock2">
                             <div class="cellLeft">ФИО</div>
                             <div class="cellRight">'.$user[0]['full_name'].'</div>
-                        </div>
+                        </div>  
 
                         <div class="cellsBlock2">
                             <div class="cellLeft">Должность</div>
@@ -65,33 +65,12 @@
 			echo $permissions;
 			echo '				
                             </div>
-                        </div>
-                        
-                        <div class="cellsBlock2">
-                            <div class="cellLeft">Специализация</div>
-                            <div class="cellRight">';
+                        </div>';
 
-            if ($specializations != 0){
-                //var_dump($specializations_j);
-                foreach ($specializations as $data){
-                    $specializations_str_rez .= '<span class="tag">'.$data['name'].'</span>';
-                }
-            }else{
-                $specializations_str_rez = 'не указано';
-            }
 
-            echo $specializations_str_rez;
-			echo '				
-                            </div>
-                        </div>
-							
-            <!--		<div class="cellsBlock2">
-                            <div class="cellLeft">Организация</div>
-                            <div class="cellRight">';
-			echo $org;
+			//echo $org;
 			echo '	
-                            </div>
-                        </div>-->
+
                                         
                         <div class="cellsBlock2">
                             <div class="cellLeft">Логин</div>
@@ -105,43 +84,7 @@
                         
                         <br><br><br>';
 
-			echo '
-                        <a href="scheduler_own.php?id='.$_GET['id'].'" class="b">График работы</a>';
 
-			if ($zapis['see_own'] == 1){
-					echo '
-                        <a href="zapis_own.php?y='.$year.'&m='.$month.'&d='.$day.'&worker='.$_SESSION['id'].'" class="b">Запись сегодня</a>';
-			}
-
-            echo '
-                        <a href="fl_my_tabels.php" class="b">Табели</a>';
-
-
-			echo '
-                        <div id="status_notes">';
-
-            /*echo '
-                        <div class="showHiddenDivs" style="cursor: pointer;">
-                            <div style="color: #7D7D7D; margin: 10px;" id="showHideText">Показать всё</div>
-                        </div>';*/
-            echo '
-                        <div id="tabs_w" style="font-family: Verdana, Calibri, Arial, sans-serif; font-size: 100% !important;">
-                            <ul>
-                                <li><a href="#tabs-1">Напоминания</a></li>
-                                <li><a href="#tabs-2">Направления</a></li>
-                            </ul>';
-            echo '
-                            <div id="tabs-1">
-                                <div id="notes"></div>
-                            </div>';
-
-            echo '
-                            <div id="tabs-2">
-                                <div id="removes"></div>
-                            </div>';
-
-			echo '
-				        </div>';
 				
 
 			echo '
@@ -149,53 +92,7 @@
 			echo '
 				</div>';
 				
-			echo '
-				<script>
 
-                    $(document).ready(function() {
-                        //Получаем, показываем направления
-                        getNotesfunc ('.$_GET['id'].');
-                        getRemovesfunc ('.$_GET['id'].');
-				    });
-				
-					/*$(".showHiddenDivs").click(function () {
-						$(".hiddenDivs").each(function(){
-
-							if($(this).css("display") == "none"){
-								$(this).css("display", "table");
-								$("#showHideText").html("Скрыть закрытые");
-							}else{
-								$(this).css("display", "none");
-								$("#showHideText").html("Показать всё");
-							}
-						})
-					});*/
-					
-					/*$(function() {
-						$(\'#SelectFilial\').change(function(){
-							//alert($(this).val());
-							ajax({
-								url:"Change_user_session_filial.php",
-								//statbox:"status_notes",
-								method:"POST",
-								data:
-								{
-									data: $(this).val()
-								},
-								success:function(data){
-									//document.getElementById("status_notes").innerHTML=data;
-									//alert("Ok");
-									location.reload();
-								}
-							})
-						});
-					});*/
-					
-
-
- 				</script> 
-			';
-				
 		}else{
 			echo '<h1>Что-то пошло не так</h1><a href="index.php">Вернуться на главную</a>';
 		}

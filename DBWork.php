@@ -1252,11 +1252,11 @@
 			}
 		}else{
 			if ($datatable == 'notes'){
-				if ($type == 'dead_line'){
+				/*if ($type == 'dead_line'){
 					$q = ' WHERE (`dead_line` < '.time().' OR `dead_line` = '.time().') AND `closed` <> 1 ORDER BY `dead_line` DESC';
 				}else{
 					$q = ' WHERE `'.$type.'` = '.$sw.' ORDER BY `dead_line` ASC';
-				}
+				}*/
 			}elseif ($datatable == 'removes'){
 					$q = ' WHERE `'.$type.'` = '.$sw.' ORDER BY `create_time` DESC';
 			}elseif ($datatable == 'removes_open'){

@@ -7675,7 +7675,7 @@
 		}
 
 		//Запрос к базе онлайн записи и выгрузка
-		$.ajax({
+		/*$.ajax({
 			url:"get_zapis3.php",
 			global: false,
 			type: "POST",
@@ -7698,7 +7698,7 @@
 
 				}
 			}
-		});
+		});*/
 
 
 		//Запрос есть ли новые объявления
@@ -8152,35 +8152,7 @@
         })
 	}
 
-	//Получаем, показываем напоминания
-    function getNotesfunc(worker_id){
 
-    	var link = "notes_get_f.php";
-
-		var reqData = {
-            worker_id: worker_id
-        };
-
-        $.ajax({
-            url: link,
-            global: false,
-            type: "POST",
-            dataType: "JSON",
-            data: reqData,
-            cache: false,
-            beforeSend: function() {
-				$("#notes").html("<div style='width: 120px; height: 32px; padding: 5px 10px 10px; text-align: center; vertical-align: middle; border: 1px dotted rgb(255, 179, 0); background-color: rgba(255, 236, 24, 0.5);'><img src='img/wait.gif' style='float:left;'><span style='float: right;  font-size: 90%;'> обработка...<br>загрузка</span></div>");
-            },
-            success:function(res){
-                //console.log (res);
-
-                if(res.result == "success") {
-                    $("#notes").html(res.data);
-                }else{
-                }
-            }
-        })
-	}
 
 	//Получаем, показываем записи в карточке клиента
     function getZapisfunc(client_id){

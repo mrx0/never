@@ -151,7 +151,6 @@
             }
         }
 
-        echo '<a href="history.php" class="b3">История изменений и обновлений до <b style="color: red;">15.09.2017</b></a><br>';
         echo '	
 			
 			    <div id="doc_title">Главная - Асмедика</div>
